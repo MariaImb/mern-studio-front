@@ -1,0 +1,78 @@
+
+.studio-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.separador{
+    height: 90px;
+    background-color: rgb(47, 46, 46);
+    position: sticky;
+    margin-top: -90px; 
+    top: -90px;
+}
+.studio-container h1{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(48, 47, 47);
+    padding: 0px 15px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.equipos-container{
+    /* background-color: rgb(48, 47, 47); */
+    background-color: rgba(38,38,38,15)
+}
+
+.equipos-container h1{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding: 90px 15px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+   
+}
+.studio-container p {
+    display: flex;
+    text-align: center;
+    color: rgb(48, 47, 47);
+    margin-bottom: 80px;
+    justify-content: center;
+    text-align: center;
+}
+
+.row-cards {
+    justify-content: space-around;
+   
+}
+.card {
+
+    display: flex;
+    margin-bottom: 80px;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    width: 25rem;
+ 
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-subtitle{
+    text-align: center;
+}
+
+
+ .separador-img {
+    background: url('../images/footer6.png') center repeat;
+    height: 200px;
+    margin-top: 80px;
+
+} 

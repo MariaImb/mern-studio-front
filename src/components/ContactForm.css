@@ -1,0 +1,129 @@
+/* CONTACTO */
+:root {
+    --blanco: #f2f2f2;
+    --primario: #3b8c8c;
+    --secundario: #f29863;
+    --terciario: #72aeb1;
+    --grisoscuro:  rgba(80, 78, 78);
+    --verde: #1CA68D;
+    --verdeoscuro: #0c776b;
+    --alternativo1: #27403D;
+    --alternativo2: #B5CDCD;
+    --alternativo3: #FC9F65;
+    --alternativo4: #475F5F;
+    --alternativo5: #F0D5BD;
+    --colorbarranv: #504e4e;
+
+}
+
+.contact-container {
+    background: url('../images/img-12.jpg') center center/cover no-repeat; 
+    height: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    position: relative;
+    top: -90px;  
+
+}
+
+
+.infocontacto {
+    color: white;
+    font-size: 20px!important;
+    padding-bottom: 30px;
+    padding-top: 60px;
+}
+
+.infocontacto h3{
+    font-size: 20px;
+}
+
+.contcontacto{
+    margin-bottom: 40px;
+}
+
+.contbutton{
+    margin-bottom: 30px;
+ 
+}
+.btn-submit{
+    background-color: #475F5F;
+}
+
+.btn-submit:hover{
+    background-color:#FC9F65;
+    color:#504e4e;
+
+}
+.titulocontacto{
+
+    font-weight: 400;
+    text-shadow: none;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.contenedortitulo{
+    background-color: rgb(80 78 78 / 40%);
+    color: white;
+    margin-top: 50px;
+}
+
+
+.contenedortitulo h1{
+    padding-top: 10px;
+}
+
+.contenedortitulo p{
+    font-size: 18px;
+}
+
+.mapa {
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+
+textarea{
+    height: 200px!important;
+}
+
+
+.error{
+    font-size: 16px;
+    text-align: center;
+    background-color:#475F5F;
+    color:#FC9F65;
+    padding: 20px;
+}
+
+
+.correcto{
+    font-size: 16px;
+    text-align: center;
+    background-color:#475F5F;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 780px) {
+
+    .infocontacto{
+        text-align: center;
+    }
+    .datoscontacto{
+        display: none;
+    }
+    .contbutton{
+        text-align: center;
+    }
+
+}

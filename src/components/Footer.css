@@ -1,0 +1,28 @@
+.footer-img {
+    background: url('../images/footer6.png') center repeat;
+    height: 200px;
+    margin-top: 80px;
+
+}
+
+.footer-container{
+    background-color: rgba(38,38,38,15);
+    height: 200px;
+    display: column;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-rights {
+    color: rgba(237,212,166,93);
+    padding-top: 15px;
+}
