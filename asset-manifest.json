@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/mern-studio-front/static/css/main.dd6d4479.chunk.css",
+    "main.js": "/mern-studio-front/static/js/main.c524f5cf.chunk.js",
+    "main.js.map": "/mern-studio-front/static/js/main.c524f5cf.chunk.js.map",
+    "runtime-main.js": "/mern-studio-front/static/js/runtime-main.58a5047d.js",
+    "runtime-main.js.map": "/mern-studio-front/static/js/runtime-main.58a5047d.js.map",
+    "static/js/2.4bb0fd7b.chunk.js": "/mern-studio-front/static/js/2.4bb0fd7b.chunk.js",
+    "static/js/2.4bb0fd7b.chunk.js.map": "/mern-studio-front/static/js/2.4bb0fd7b.chunk.js.map",
+    "index.html": "/mern-studio-front/index.html",
+    "static/css/main.dd6d4479.chunk.css.map": "/mern-studio-front/static/css/main.dd6d4479.chunk.css.map",
+    "static/js/2.4bb0fd7b.chunk.js.LICENSE.txt": "/mern-studio-front/static/js/2.4bb0fd7b.chunk.js.LICENSE.txt",
+    "static/media/cont.35aaf11c.jpg": "/mern-studio-front/static/media/cont.35aaf11c.jpg",
+    "static/media/StudioDescription.css": "/mern-studio-front/static/media/footer6.6c2df4b5.png",
+    "static/media/img-11.36e5ae1a.jpg": "/mern-studio-front/static/media/img-11.36e5ae1a.jpg",
+    "static/media/ContactForm.css": "/mern-studio-front/static/media/img-12.fe559153.jpg",
+    "static/media/img-13.67df23e7.jpg": "/mern-studio-front/static/media/img-13.67df23e7.jpg",
+    "static/media/img-14.1b7ef2f7.jpg": "/mern-studio-front/static/media/img-14.1b7ef2f7.jpg",
+    "static/media/img-5.89b5929d.png": "/mern-studio-front/static/media/img-5.89b5929d.png",
+    "static/media/HeroSection.css": "/mern-studio-front/static/media/img-6.7474f568.jpg",
+    "static/media/kemper.28e699c8.jpg": "/mern-studio-front/static/media/kemper.28e699c8.jpg",
+    "static/media/lynx.95ba466c.jpg": "/mern-studio-front/static/media/lynx.95ba466c.jpg",
+    "static/media/mic1.4e76049d.jpg": "/mern-studio-front/static/media/mic1.4e76049d.jpg",
+    "static/media/mic2.ec119629.jpg": "/mern-studio-front/static/media/mic2.ec119629.jpg",
+    "static/media/monitor1.0e63b38e.jpg": "/mern-studio-front/static/media/monitor1.0e63b38e.jpg",
+    "static/media/monitor3.13b8d47d.png": "/mern-studio-front/static/media/monitor3.13b8d47d.png",
+    "static/media/protools.18950d1b.jpg": "/mern-studio-front/static/media/protools.18950d1b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58a5047d.js",
+    "static/js/2.4bb0fd7b.chunk.js",
+    "static/css/main.dd6d4479.chunk.css",
+    "static/js/main.c524f5cf.chunk.js"
+  ]
+}
