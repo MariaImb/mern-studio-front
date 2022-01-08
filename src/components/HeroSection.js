@@ -11,7 +11,7 @@ function HeroSection() {
         <div className='hero-container'>
             <img src={logo} alt="logo" id="logo" height="400px"/>
             <h1>RECORDING STUDIO</h1>
-            <button className='btn btn--large btn--outline'><Link to='/contact' className="link-button">TURNOS ONLINE</Link></button> 
+            <button className='btn btn--large btn--outline'><Link to='/contacto' className="link-button">TURNOS ONLINE</Link></button> 
             
         </div>
     )

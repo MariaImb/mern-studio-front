@@ -31,7 +31,7 @@ function StudioDescription(){
             <h1>EQUIPOS</h1>
             <div className="container">
                 <div className="row row-cards">
-                    <div className="col-md-5 col-sm-10 card">
+                    <div className="col-md-5 col-sm-10 equipos-card card">
                         <div className="card-body">
                             <img src={monitor1} alt="monitor1" className="card-img-top"/>
                             <h5 className="card-title">MONITOR</h5>
@@ -39,7 +39,7 @@ function StudioDescription(){
                             {/* <p className="card-text">Microfono de alta sensibilidad. Cuenta ademas con filtro antipop</p> */}
                         </div>                
                     </div>
-                    <div className="col-md-5 col-sm-10 card">
+                    <div className="col-md-5 col-sm-10 equipos-card card">
                         <div className="card-body">
                             <img src={monitor3} alt="monitor3" className="card-img-top"/>
                             <h5 className="card-title">MONITOR</h5>
@@ -50,7 +50,7 @@ function StudioDescription(){
                     </div>
                 </div>
                 <div className="row row-cards">
-                    <div className="col-md-5 col-sm-10 card">                        
+                    <div className="col-md-5 col-sm-10 equipos-card card">                        
                         <div className="card-body">
                             <img src={mic1} alt="monitor3" className="card-img-top"/>
                             <h5 className="card-title">MICROFONO</h5>
@@ -58,7 +58,7 @@ function StudioDescription(){
                             {/* <p className="card-text">Microfono de alta sensibilidad. Cuenta ademas con filtro antipop</p> */}
                         </div>                       
                     </div>
-                    <div className="col-md-5 col-sm-10 card">
+                    <div className="col-md-5 col-sm-10 equipos-card card">
                         <div className="card-body">
                             <img src={mic2} alt="monitor3" className="card-img-top"/>
                             <h5 className="card-title">MICROFONO</h5>
@@ -68,7 +68,7 @@ function StudioDescription(){
                     </div>
                 </div>
                 <div className="row row-cards">
-                    <div className="col-md-5 col-sm-10 card">                        
+                    <div className="col-md-5 col-sm-10 equipos-card card">                        
                         <div className="card-body">
                             <img src={cont} alt="monitor3" className="card-img-top"/>
                             <h5 className="card-title">CONTRLADOR MIDI</h5>
@@ -76,7 +76,7 @@ function StudioDescription(){
                             {/* <p className="card-text">Microfono de alta sensibilidad. Cuenta ademas con filtro antipop</p> */}
                         </div>                       
                     </div>
-                    <div className="col-md-5 col-sm-10 card">
+                    <div className="col-md-5 col-sm-10 equipos-card card">
                         <div className="card-body">
                             <img src={protools} alt="monitor3" className="card-img-top"/>
                             <h5 className="card-title">SOFTWARES</h5>
@@ -89,7 +89,7 @@ function StudioDescription(){
                     </div>
                 </div>
                 <div className="row row-cards">
-                    <div className="col-md-5 col-sm-10 card">                        
+                    <div className="col-md-5 col-sm-10 equipos-card card">                        
                         <div className="card-body">
                             <img src={lynx} alt="monitor3" className="card-img-top"/>
                             <h5 className="card-title">INTERFACES</h5>
@@ -99,7 +99,7 @@ function StudioDescription(){
                             {/* <p className="card-text">Microfono de alta sensibilidad. Cuenta ademas con filtro antipop</p> */}
                         </div>                       
                     </div>
-                    <div className="col-md-5 col-sm-10 card">
+                    <div className="col-md-5 col-sm-10 equipos-card card">
                         <div className="card-body">
                             <img src={kemper} alt="monitor3" className="card-img-top"/>
                             <h5 className="card-title">EQUIPAMIENTO PARA BAJO Y GUITARRA</h5>

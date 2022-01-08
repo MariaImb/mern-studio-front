@@ -43,13 +43,14 @@
     margin-bottom: 80px;
     justify-content: center;
     text-align: center;
+    font-size: 22px;
 }
 
 .row-cards {
     justify-content: space-around;
    
 }
-.card {
+.equipos-card {
 
     display: flex;
     margin-bottom: 80px;
