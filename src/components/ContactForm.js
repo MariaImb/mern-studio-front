@@ -1,8 +1,22 @@
-import React, {useState} from 'react'
+// import React, {useState} from 'react'
 import './ContactForm.css';
 import axios from 'axios';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { Map, MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import "leaflet/dist/leaflet.css";
+import Leaflet from 'leaflet';
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import iconRetina from 'leaflet/dist/images/marker-icon-2x.png';
+
+let DefaultIcon = Leaflet.icon({
+            ...Leaflet.Icon.Default.prototype.options,
+            iconUrl: icon,
+            iconRetinaUrl: iconRetina,
+            shadowUrl: iconShadow
+        });
+        Leaflet.Marker.prototype.options.icon = DefaultIcon;
 
 const ContactForm = (e) => {
     
@@ -71,19 +85,20 @@ const ContactForm = (e) => {
                             nombre: Yup.string()
                             .min(3, 'Minimo de 3 caracteres')
                             .required('Requerido'),
-                            email: Yup.string().email('Correo electronico no valido').required('Requerido'),
+                            email: Yup.string().email('Email no valido')
+                            .required('Requerido'),
                             telefono: Yup.number()
-                            .max(12, 'Numero de telefono no valido')
+                            // .max(12, 'Numero no valido')
                             .required('Requerido'),
                             asunto: Yup.string()
-                            .max(20, 'Debe tener menos de 20 caracteres')
+                            .max(20, 'Maximo 20 caracteres')
                             .required('Requerido'),
                             mensaje: Yup.string()
-                            .max(120, 'Debe tener menos de 120 caracteres')
+                            .max(120, 'Maximo 120 caracteres')
                             .required('Requerido'),
                             })}                 
                         onSubmit={(values, { setSubmitting }) => {
-                            axios.post('http://localhost:4000/api/contact', {
+                            axios.post('https://mern-studio-back.herokuapp.com/api/contact', {
                             nombre: values.nombre,
                             email: values.email,
                             telefono: values.telefono,
@@ -118,24 +133,39 @@ const ContactForm = (e) => {
                                 </div>
                                 <br/>
                                 <div className="col-md-6">
-                                    <input name="email" type="text" id="email" className="form-control my-3" placeholder='Email' value={values.email} onChange={handleChange} />
+                                    <input name="email" type="text" id="email" className="form-control my-3" placeholder='Email' value={values.email} onChange={handleChange} onBlur={handleBlur} />
+                                    <span id="respuesta" className="tab-content">
+                                        {errors.email && touched.email ? errors.email:""}&nbsp;
+                                    </span>
                                 </div>
+
                                 <br/>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <input name="telefono" type="text" id="telefono" className="form-control my-3" value={values.telefono} placeholder='Telefono' onChange={handleChange} />
+                                    <input name="telefono" type="text" id="telefono" className="form-control my-3" value={values.telefono} placeholder='Telefono' onChange={handleChange} onBlur={handleBlur}/>
+                                    <span id="respuesta" className="tab-content">
+                                        {errors.telefono && touched.telefono ? errors.telefono:""}&nbsp;
+                                    </span>
                                 </div>
+
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <input name="asunto" type="text" id="asunto" className="form-control my-3" value={values.asunto} placeholder='Asunto' onChange={handleChange} />
+                                    <input name="asunto" type="text" id="asunto" className="form-control my-3" value={values.asunto} placeholder='Asunto' onChange={handleChange} onBlur={handleBlur}/>
+                                    <span id="respuesta" className="tab-content">
+                                        {errors.asunto && touched.asunto ? errors.asunto:""}&nbsp;
+                                    </span>
                                 </div>
+
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <textarea name="mensaje" row="10" id="mensaje" cols="30" className="form-control my-3" height="200px" value={values.mensaje} placeholder='Mensaje' onChange={handleChange}></textarea>
+                                    <textarea name="mensaje" row="10" id="mensaje" cols="30" className="form-control my-3" height="200px" value={values.mensaje} placeholder='Mensaje' onChange={handleChange} onBlur={handleBlur}></textarea>
                                 </div>
+                                <span id="respuesta" className="tab-content">
+                                        {errors.mensaje && touched.mensaje ? errors.mensaje:""}&nbsp;
+                                </span>
                             </div>
                             <div className="row">
                                 <div className="col-md-12 contbutton">
@@ -149,7 +179,17 @@ const ContactForm = (e) => {
                 
             </div>
             <div className="mapa">
-                <div dangerouslySetInnerHTML={ {__html: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.6958724357764!2d-60.69519412358719!3d-31.611027768398536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5075f3cfffbc7%3A0x36d95453cef4453c!2sEscuela%20de%20Danzas%20Miriam%20Heredia!5e0!3m2!1ses!2sar!4v1625277147779!5m2!1ses!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'} } />
+                <MapContainer center={[-31.637911, -60.702496]} zoom={15} scrollWheelZoom={false} style={{height:"300px", width:"80%"}}>
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={[-31.637911, -60.702496]}>
+                        <Popup>
+                        A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
             </div>
         </>      
     )

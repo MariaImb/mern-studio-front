@@ -46,25 +46,13 @@ const ClientsRecorded = () => {
                             </div>                       
                         </div>
                         <div className="col-md-5 col-sm-10 card clientes-card">
-                            <div className="card-body">
-                
-                                <h5 className="card-title">YASMIN - BLABLABLEO</h5>
-                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/XNkH9g5qD4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-                            </div>                      
-                        </div>
-                    </div>
-                    <div className="row row-cards">
-                        <div className="col-md-5 col-sm-10 card clientes-card">                        
-                            <div className="card-body">
+                        <div className="card-body">
                                 <h5 className="card-title">FABIÁN ZÁRATE - A VOS CIUDAD</h5>
                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/XpkZqZD984g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-                            </div>                       
-                        </div>
-        
-                    </div>
 
+                            </div>                          
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="separador-img2">
@@ -83,14 +71,14 @@ const ClientsRecorded = () => {
                         <div className="col-md-5 col-sm-10 card clientes-card">
                             <div className="card-body">                          
                                 <h5 className="card-title">THE MEBRITS - ME VAS A EXTRAÑAR COVER</h5>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/f5GF6NbfvGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/f5GF6NbfvGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>                
                         </div>
                         <div className="col-md-5 col-sm-10 card clientes-card">
                             <div className="card-body">
                                 
                                 <h5 className="card-title">THE MEBRITS - RODRIGO BUENO COVER</h5>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/VepRdinaQtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VepRdinaQtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 
 
                             </div>
@@ -101,7 +89,7 @@ const ClientsRecorded = () => {
                             <div className="card-body">
             
                                 <h5 className="card-title">LOS AUTENTICOS DECADENTES - CORAZON COVER</h5>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/8Uf3r5GAbYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/8Uf3r5GAbYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         
                             </div>                       
                         </div>
@@ -109,7 +97,7 @@ const ClientsRecorded = () => {
                             <div className="card-body">
                 
                                 <h5 className="card-title">ATAQUE 77 - HACELO POR MI COVER</h5>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/i-loQ-lkX1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/i-loQ-lkX1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
                             </div>                      
                         </div>

@@ -84,8 +84,10 @@
 }
 
 .mapa {
-    margin: 0 auto;
-    width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 
@@ -125,5 +127,10 @@ textarea{
     .contbutton{
         text-align: center;
     }
+
+}
+
+.row span{
+    color: rgb(255, 153, 0);
 
 }
