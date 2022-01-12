@@ -161,6 +161,8 @@
   @media only screen and (max-width: 720px) {
     .cards__item {
       margin-bottom: 2rem;
+      width: 90vw;
+     
     }
     
   }

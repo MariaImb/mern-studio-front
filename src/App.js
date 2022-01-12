@@ -6,12 +6,14 @@ import Contact from './components/pages/Contact';
 import Studio from './components/pages/Studio';
 import Clients from './components/pages/Clients';
 import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
 
     <Router>
+      <ScrollToTop/>
       <Navbar/>
       <Switch>
         <Route path='/' exact component={Home}/>

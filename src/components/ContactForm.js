@@ -1,15 +1,15 @@
-// import React, {useState} from 'react'
 import './ContactForm.css';
 import axios from 'axios';
-import { Formik } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { Map, MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
 import Leaflet from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import iconRetina from 'leaflet/dist/images/marker-icon-2x.png';
 
+//para que funcione el mapa en react con
 let DefaultIcon = Leaflet.icon({
             ...Leaflet.Icon.Default.prototype.options,
             iconUrl: icon,
@@ -19,32 +19,6 @@ let DefaultIcon = Leaflet.icon({
         Leaflet.Marker.prototype.options.icon = DefaultIcon;
 
 const ContactForm = (e) => {
-    
-    // const [nombre, setNombre] = useState()
-    // const [email, setEmail] = useState()
-    // const [telefono, setTelefono] = useState()
-    // const [asunto, setAsunto] = useState()
-    // const [mensaje, setMensaje] = useState()
-
-    //evita que la pagina se recargue cuando se envie el formulario
-    // const handleSubmit = async e => {
-    //     e.preventDefault();
-    //     await axios.post('http://localhost:4000/api/contact', {
-    //         nombre: nombre,
-    //         email: email,
-    //         telefono: telefono,
-    //         asunto: asunto,
-    //         mensaje: mensaje,
-
-    //     })
-
-    //     setNombre('')
-    //     setEmail('')
-    //     setTelefono('')
-    //     setAsunto('')
-    //     setMensaje('')
-        
-    // }
 
     return (    
         <>     
@@ -55,7 +29,7 @@ const ContactForm = (e) => {
                         <p className="lead text-center">Completá los campos con tus datos, envianos tu consulta o solicitud de turno y nos pondremos en contacto a la brevedad</p>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row cont-form">
                     <div className="col-md-4 datoscontacto">                   
                         <div className="infocontacto">
                             <h3><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
@@ -97,7 +71,7 @@ const ContactForm = (e) => {
                             .max(120, 'Maximo 120 caracteres')
                             .required('Requerido'),
                             })}                 
-                        onSubmit={(values, { setSubmitting }) => {
+                        onSubmit={(values, {resetForm, setSubmitting, setStatus} ) => {
                             axios.post('https://mern-studio-back.herokuapp.com/api/contact', {
                             nombre: values.nombre,
                             email: values.email,
@@ -105,7 +79,27 @@ const ContactForm = (e) => {
                             asunto: values.asunto,
                             mensaje: values.mensaje,
                             })
+                            .then(res => {
+                                if (res.status === 200) {
+                                    // 200 means POST method response with success 
+                                    // Pass your server response to Formik
+                                    setStatus({
+                                      sent: true,
+                                      msg: "El mensaje fue enviado correctamente!"
+                                    })
+                                }
+                            })
+                            
+                            .catch(err => {
+                                // Something went wrong
+                                setStatus({
+                                  sent: false,
+                                  msg: `Error! ${err}. Por favor intente mas tarde.`
+                                })
+                              })
+
                             setSubmitting(false);
+                            resetForm();
                         }}
                         >
                         {({
@@ -116,24 +110,25 @@ const ContactForm = (e) => {
                             handleBlur,
                             handleSubmit,
                             isSubmitting,
-                            /* and other goodies */
+                            status,
                         }) => (
-                        <form className="contactform" id="contactform" onSubmit={handleSubmit}>
+                        <Form className="contactform" id="contactform" onSubmit={handleSubmit}>
                             <div className="row">
                                 <div className="col-md-8">
-
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-6">
-                                    <input name="nombre" type="text" id="nombre" className="form-control my-3" placeholder='Nombre' value={values.nombre} onChange={handleChange} onBlur={handleBlur}/>
+                                    <input name="nombre" type="text" id="nombre" className= {errors.nombre && touched.nombre ?"form-control my-3 is-invalid": "form-control my-3" }
+                                    
+                                    placeholder='Nombre' value={values.nombre} onChange={handleChange} onBlur={handleBlur}/>
                                     <span id="respuesta" className="tab-content">
                                         {errors.nombre && touched.nombre ? errors.nombre:""}&nbsp;
                                     </span>
                                 </div>
                                 <br/>
                                 <div className="col-md-6">
-                                    <input name="email" type="text" id="email" className="form-control my-3" placeholder='Email' value={values.email} onChange={handleChange} onBlur={handleBlur} />
+                                    <input name="email" type="text" id="email" className={errors.email && touched.email ?"form-control my-3 is-invalid": "form-control my-3" } placeholder='Email' value={values.email} onChange={handleChange} onBlur={handleBlur} />
                                     <span id="respuesta" className="tab-content">
                                         {errors.email && touched.email ? errors.email:""}&nbsp;
                                     </span>
@@ -143,7 +138,7 @@ const ContactForm = (e) => {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <input name="telefono" type="text" id="telefono" className="form-control my-3" value={values.telefono} placeholder='Telefono' onChange={handleChange} onBlur={handleBlur}/>
+                                    <input name="telefono" type="text" id="telefono" className={errors.telefono && touched.telefono ?"form-control my-3 is-invalid": "form-control my-3" } value={values.telefono} placeholder='Telefono' onChange={handleChange} onBlur={handleBlur}/>
                                     <span id="respuesta" className="tab-content">
                                         {errors.telefono && touched.telefono ? errors.telefono:""}&nbsp;
                                     </span>
@@ -152,7 +147,7 @@ const ContactForm = (e) => {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <input name="asunto" type="text" id="asunto" className="form-control my-3" value={values.asunto} placeholder='Asunto' onChange={handleChange} onBlur={handleBlur}/>
+                                    <input name="asunto" type="text" id="asunto" className={errors.asunto && touched.asunto ?"form-control my-3 is-invalid": "form-control my-3" } value={values.asunto} placeholder='Asunto' onChange={handleChange} onBlur={handleBlur}/>
                                     <span id="respuesta" className="tab-content">
                                         {errors.asunto && touched.asunto ? errors.asunto:""}&nbsp;
                                     </span>
@@ -161,18 +156,26 @@ const ContactForm = (e) => {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <textarea name="mensaje" row="10" id="mensaje" cols="30" className="form-control my-3" height="200px" value={values.mensaje} placeholder='Mensaje' onChange={handleChange} onBlur={handleBlur}></textarea>
+                                    <textarea name="mensaje" row="10" id="mensaje" cols="30" className={errors.mensaje && touched.mensaje ?"form-control my-3 is-invalid": "form-control my-3" } height="200px" value={values.mensaje} placeholder='Mensaje' onChange={handleChange} onBlur={handleBlur}></textarea>
                                 </div>
                                 <span id="respuesta" className="tab-content">
                                         {errors.mensaje && touched.mensaje ? errors.mensaje:""}&nbsp;
                                 </span>
                             </div>
                             <div className="row">
-                                <div className="col-md-12 contbutton">
-                                    <button type="submit" id="submit" className="btn btn-lg btn-submit btn-outline-light" >Enviar</button>
+                                <div className="col-md-3 contbutton  d-flex justify-content-center align-items-center m-2">
+                                    <button type="submit" id="submit" className="btn btn-lg btn-submit btn-outline-light" >Enviar</button>      
+                                </div>
+                                <div className="col d-flex justify-content-center align-items-center m-2">
+                                    {status && status.msg && (
+                                    <p className={`alert ${ status.sent ? "alert-success m-0" : "alert-error m-0"}`}>
+                                        {status.msg}
+                                    </p>
+                                    )}
                                 </div>
                             </div>
-                        </form>
+
+                        </Form>
                         )}</Formik>
                     </div>               
                 </div>     

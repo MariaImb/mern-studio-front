@@ -18,7 +18,7 @@
 
 .contact-container {
     background: url('../images/img-12.jpg') center center/cover no-repeat; 
-    height: 900px;
+    /* height: 900px; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -29,8 +29,13 @@
     position: relative;
     top: -90px;  
 
+
 }
 
+.cont-form{
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+    padding: 10px 30px;
+}
 
 .infocontacto {
     color: white;
@@ -40,17 +45,18 @@
 }
 
 .infocontacto h3{
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.infocontacto p{
+    font-size: 18px;
 }
 
 .contcontacto{
     margin-bottom: 40px;
 }
 
-.contbutton{
-    margin-bottom: 30px;
- 
-}
+
 .btn-submit{
     background-color: #475F5F;
 }
@@ -71,7 +77,8 @@
 .contenedortitulo{
     background-color: rgb(80 78 78 / 40%);
     color: white;
-    margin-top: 50px;
+    margin-top: 100px;
+
 }
 
 
@@ -127,6 +134,9 @@ textarea{
     .contbutton{
         text-align: center;
     }
+    /* .contenedortitulo{
+        margin-top: 250px;
+    } */
 
 }
 
