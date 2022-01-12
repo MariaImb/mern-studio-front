@@ -25,4 +25,11 @@
 .footer-rights {
     color: rgba(237,212,166,93);
     padding-top: 15px;
+
+}
+
+@media (max-width: 780px) {
+    .footer-rights p{
+        font-size: 13px;
+    }
 }
