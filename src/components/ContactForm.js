@@ -22,7 +22,7 @@ const ContactForm = (e) => {
 
     return (    
         <>     
-            <div className="contact-container">
+            <div className="contact-container container-fluid">
                 <div className="row contcontacto">
                     <div className="col-md-12 contenedortitulo">
                         <h1 className="display-4 font-weight-bold text-uppercase text-center titulocontacto">Contacto</h1>

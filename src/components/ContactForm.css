@@ -34,7 +34,7 @@
 
 .cont-form{
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
-    padding: 10px 30px;
+  
 }
 
 .infocontacto {
@@ -54,6 +54,7 @@
 
 .contcontacto{
     margin-bottom: 40px;
+    padding: 0;
 }
 
 
@@ -78,6 +79,7 @@
     background-color: rgb(80 78 78 / 40%);
     color: white;
     margin-top: 100px;
+    padding: 0;
 
 }
 
