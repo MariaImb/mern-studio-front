@@ -90,21 +90,13 @@
   }
   @media screen and (max-width: 768px){
     .cards {
-      margin-top: 80vh;
+      margin-top: 90vh;
     }
 
   }
   @media (max-width: 720px) {
     .cards__item {
       margin-bottom: 2rem;
-      /* width: 90vw; */
-     
     }
     
   }
-/* 
-  @media (max-width: 1200px){
-    .cards {
-      padding: 80px 60px; 
-    }
-  } */
