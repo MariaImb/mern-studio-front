@@ -26,7 +26,7 @@ const ContactForm = (e) => {
                 <div className="row contcontacto">
                     <div className="col-md-12 contenedortitulo">
                         <h1 className="display-4 font-weight-bold text-uppercase text-center titulocontacto">Contacto</h1>
-                        <p className="lead text-center">Completá los campos con tus datos, envianos tu consulta o solicitud de turno y nos pondremos en contacto a la brevedad</p>
+                        <p className="lead text-center">Completá los campos con tus datos, envianos tu consulta o solicitud de turno y<br/> nos pondremos en contacto a la brevedad</p>
                     </div>
                 </div>
                 <div className="row cont-form">
@@ -163,10 +163,10 @@ const ContactForm = (e) => {
                                 </span>
                             </div>
                             <div className="row">
-                                <div className="col-md-3 contbutton  d-flex justify-content-center align-items-center m-2">
+                                <div className="col-md-3 contbutton  d-flex justify-content-center align-items-center mb-2">
                                     <button type="submit" id="submit" className="btn btn-lg btn-submit btn-outline-light" >Enviar</button>      
                                 </div>
-                                <div className="col d-flex justify-content-center align-items-center m-2">
+                                <div className="col d-flex justify-content-center align-items-center mb-2">
                                     {status && status.msg && (
                                     <p className={`alert ${ status.sent ? "alert-success m-0" : "alert-error m-0"}`}>
                                         {status.msg}
