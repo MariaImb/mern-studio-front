@@ -48,4 +48,9 @@
     .hero-container img{
         height: 300px;
     }
+
+    .hero-container {
+        height: 85vh;
+        min-height: 85vh;
+    }
 }

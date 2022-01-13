@@ -27,7 +27,6 @@
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
-    text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -41,17 +40,13 @@
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    /* grid-gap: 10px;  */
     list-style: none; 
     text-align: center;
     width: 60vw;
     justify-content: end; 
     margin-right: 2rem;
     z-index: 1500;
-
   }
-  
-
   
   .nav-links {
     color: #fff;
@@ -65,11 +60,7 @@
   .nav-links:hover {
     border-bottom: 4px solid rgba(237,212,166,93);
     transition: all 0.2s ease-out;
-    /* background: rgba(77,76,82,32); */
-    
-    /* color: rgba(221,180,96,87); */
-    /* background: rgba(255, 255, 255, 0.2); */
- 
+    color: white;
   }
   
   .fa-bars {
@@ -108,27 +99,27 @@
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+      text-decoration: none;
     }
   
     .nav-links {
       text-align: center;
-      /* padding: 2rem; */
       width: 100%;
       display: table;
-   
+      text-decoration: none;
     }
   
     .nav-links:hover {
       background-color: #fff;
       color: #242424;
       border-radius: 0;
+    
     }
   
     .navbar-logo {
       position: absolute;
       top: 0;
       left: 0;
-      /* transform: translate(25%, 50%); */
     }
   
     .menu-icon {
@@ -165,5 +156,6 @@
       background: #fff;
       color: #242424;
       transition: 250ms;
+      text-decoration: none;
     }
   }

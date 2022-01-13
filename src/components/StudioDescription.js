@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './StudioDescription.css';
 import monitor1 from '../images/monitor1.jpg';
 import monitor3 from '../images/monitor3.png';

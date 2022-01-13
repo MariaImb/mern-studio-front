@@ -1,40 +1,19 @@
 /* CONTACTO */
-:root {
-    --blanco: #f2f2f2;
-    --primario: #3b8c8c;
-    --secundario: #f29863;
-    --terciario: #72aeb1;
-    --grisoscuro:  rgba(80, 78, 78);
-    --verde: #1CA68D;
-    --verdeoscuro: #0c776b;
-    --alternativo1: #27403D;
-    --alternativo2: #B5CDCD;
-    --alternativo3: #FC9F65;
-    --alternativo4: #475F5F;
-    --alternativo5: #F0D5BD;
-    --colorbarranv: #504e4e;
-
-}
 
 .contact-container {
     background: url('../images/img-12.jpg') center center/cover no-repeat; 
-    /* height: 900px; */
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
     position: relative;
     top: -90px;  
-
-
 }
 
 .cont-form{
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
-  
 }
 
 .infocontacto {
@@ -56,7 +35,6 @@
     margin-bottom: 40px;
     padding: 0;
 }
-
 
 .btn-submit{
     background-color: #475F5F;
@@ -136,9 +114,6 @@ textarea{
     .contbutton{
         text-align: center;
     }
-    /* .contenedortitulo{
-        margin-top: 250px;
-    } */
 
 }
 

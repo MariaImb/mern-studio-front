@@ -10,31 +10,26 @@ const Cards = () => {
         <div className='cards'>
             <div className="subtitle__container">
                 <h1>SERVICIOS</h1>
-            </div>
-            
-            {/* <div className="cards__container"> */}
-                
-                <ul className="cards__items">
-                    <CardItem
-                        src= {grabacion}
-                        text="GRABACIÓN"
-                        label="GRABACIÓN"
-                    />
-                    <CardItem
-                        src= {mezcla}
-                        text="MEZCLA"
-                        label="MEZCLA"
-                    />
-                    <CardItem
-                        src= {master}
-                        text="lorem"
-                        label="MASTERIZACIÓN"
-                    />
-                </ul>
-            {/* </div> */}
-        </div>   
-        
+            </div>    
+            <ul className="cards__items">
+                <CardItem
+                    src= {grabacion}
+                    text="GRABACIÓN"
+                    label="GRABACIÓN"
+                />
+                <CardItem
+                    src= {mezcla}
+                    text="MEZCLA"
+                    label="MEZCLA"
+                />
+                <CardItem
+                    src= {master}
+                    text="lorem"
+                    label="MASTERIZACIÓN"
+                />
+            </ul>
+        </div>     
     )
 }
 
-export default Cards
+export default Cards;

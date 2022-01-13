@@ -60,9 +60,6 @@
     content: "";
     width: 70px;
     height: 70px;
-    /* bottom: -50px; */
-    /* left: 50%;
-    margin-left: -50px; */
     background-color: white; 
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -71,3 +68,9 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+    .clientes-container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
